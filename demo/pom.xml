@@ -12,7 +12,11 @@
 
     <artifactId>demo</artifactId>
     <dependencies>
-        <!-- something should be here-->
+        <dependency>
+            <groupId>com.epam</groupId>
+            <artifactId>utils</artifactId>
+            <version>0.1-beta</version>
+        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
