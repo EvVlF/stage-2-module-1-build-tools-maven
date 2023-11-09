@@ -16,7 +16,6 @@
             <groupId>com.epam</groupId>
             <artifactId>utils</artifactId>
             <version>0.1-beta</version>
-            <scope>system</scope>
         </dependency>
 
         <dependency>
