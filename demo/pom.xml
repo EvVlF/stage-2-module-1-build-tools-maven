@@ -17,7 +17,6 @@
             <artifactId>utils</artifactId>
             <version>0.1-beta</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/utils/src/main/java/com/epam/utils/StringUtils.java</systemPath>
         </dependency>
 
         <dependency>
