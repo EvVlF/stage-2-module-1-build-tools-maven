@@ -2,7 +2,11 @@ package com.epam.utils;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EmptySource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
+import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.NullString;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,8 +18,9 @@ class StringUtilsTest {
         assertTrue(StringUtils.isPositiveNumber(str));
     }
 
-    @ParameterizedTest(name = "{0}")
-    @ValueSource(strings = {"-1165", "-112.01", "-64/647", "-1.101/9.901"})
+    @ParameterizedTest
+    @ValueSource(strings = {"", "0", "000.00", "-1165", "-112.01", "-64/647", "-1.101/9.901"})
+    @NullAndEmptySource
     void skipNonPositiveNumber(String str){
         assertFalse(StringUtils.isPositiveNumber(str));
     }
