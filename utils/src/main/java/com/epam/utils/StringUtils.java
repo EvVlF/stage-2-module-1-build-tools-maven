@@ -2,6 +2,9 @@ package com.epam.utils;
 
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
-        return str.matches("\\+?\\d+(?:\\.\\d+)?(?:/(?:\\d+(?:\\.\\d+)?)?)?") && !str.startsWith("-");
+        if (str == null || str.isEmpty() || str.matches("^0+(\\.0+)?$")) {
+            return false;
+        }
+        return str.matches("\\+?\\d+(?:\\.\\d+)?(?:/(?:\\d+(?:\\.\\d+)?)?)?");
     }
 }
